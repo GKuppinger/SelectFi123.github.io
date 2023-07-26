@@ -73,9 +73,10 @@ body.page-template-login-template footer{
 }
 .content {
     position: relative;
-    padding-top: 135px;
-    padding-bottom: 120px;
+    padding-top: 85px;
+    padding-bottom: 300px;
     background: #f4f4f4;
+    width:100%;
 }
 h1, h2, h3, h4, h5, h6 {
     color: #082571;
@@ -142,16 +143,18 @@ body .button {
     background: var(--main_color);
     text-align: center;
     color: var(--bg_color);
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 15px;
     border: 2px solid transparent;
     transition: .3s ease-in-out;
     margin: auto;
-}©G
+    text-decoration:none;
+}
 body .button:hover {
-    background: var(--bg_color);
-    color: var(--main_color);
+    background: #345BBE;
+    color: #fff;
     border: 2px solid var(--main_color);
+    text-decoration:none;
 }
 body .button.white {
     background: #fff;
@@ -306,7 +309,7 @@ body .blue_button:hover {
     height: 28px;
     flex-shrink: 0;
     margin-right: 15px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #666666;
     border-radius: 50%;
 }
 .input_box input[disabled] ~ .checkmark_label:before {
@@ -321,10 +324,13 @@ body .blue_button:hover {
     width: 20px;
     height: 20px;
     flex-shrink: 0;
-    background: #fff;
+    background: #1D3E93;
     border-radius: 50%;
     opacity: 0;
     transition: .4s;
+}
+.input_box.radio_box {
+    margin-bottom: 48px;
 }
 .input_box input[disabled] ~ .checkmark_label:after {
     background: #9a9a9a;
@@ -388,6 +394,15 @@ body .table svg {
 .arrow svg path{
     fill:#666666;
 }
+/* containers */
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .container {
     position: relative;
     max-width:980px !important;
@@ -453,7 +468,7 @@ body .table svg {
     margin-top: 50px;
 }
 .mt-80 {
-    margin-top: 80px;
+    margin-top: 40px;
 }
 .mb-30 {
     margin-bottom: 30px;
@@ -890,12 +905,22 @@ footer .nav-item svg {
 }
 
 /*multi-vehicle-information*/
+.co-applicant_wrap.mt-80 {
+    clear: both;
+}
+.co-appWrap {
+    float: left;
+    clear: both;
+    width: 100%;
+    margin-bottom: 30px;
+}
 .multi-vehicle-information {
     min-height: 450px;
     overflow: hidden;
 }
 .multi-vehicle-information .steps {
     position: relative;
+    padding-bottom:120px;
 }
 .multi-vehicle-information .progress-bar-wrap .circle {
     width: 20px;
@@ -1798,6 +1823,168 @@ footer .nav-item svg {
     display: none;
 }
 
+/* Justified */
+.justify-content-around {
+    justify-content: space-around!important;
+}
+.align-items-center {
+    align-items: center!important;
+}
+.justify-content-between {
+    justify-content: space-between!important;
+}
+.d-flex {
+    display: flex!important;
+}
+.title {
+    font: 200 28px/1 var(--second_font);
+    letter-spacing: .3px;
+}
+/* Nav */
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: $nav-link-padding-y $nav-link-padding-x;
+  @include font-size($nav-link-font-size);
+  font-weight: $nav-link-font-weight;
+  color: $nav-link-color;
+  text-decoration: if($link-decoration == none, null, none);
+  @include transition($nav-link-transition);
+
+  &:hover,
+  &:focus {
+    color: $nav-link-hover-color;
+    text-decoration: if($link-hover-decoration == underline, none, null);
+  }
+
+  // Disabled state lightens text
+  &.disabled {
+    color: $nav-link-disabled-color;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+//
+// Tabs
+//
+
+.nav-tabs {
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+
+  .nav-link {
+    margin-bottom: -$nav-tabs-border-width;
+    background: none;
+    border: $nav-tabs-border-width solid transparent;
+    @include border-top-radius($nav-tabs-border-radius);
+
+    &:hover,
+    &:focus {
+      border-color: $nav-tabs-link-hover-border-color;
+      // Prevents active .nav-link tab overlapping focus outline of previous/next .nav-link
+      isolation: isolate;
+    }
+
+    &.disabled {
+      color: $nav-link-disabled-color;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $nav-tabs-link-active-color;
+    background-color: $nav-tabs-link-active-bg;
+    border-color: $nav-tabs-link-active-border-color;
+  }
+
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -$nav-tabs-border-width;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    @include border-top-radius(0);
+  }
+}
+
+
+//
+// Pills
+//
+
+.nav-pills {
+  .nav-link {
+    background: none;
+    border: 0;
+    @include border-radius($nav-pills-border-radius);
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+    color: $nav-pills-link-active-color;
+    @include gradient-bg($nav-pills-link-active-bg);
+  }
+}
+
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  > .nav-link,
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  > .nav-link,
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+.nav-fill,
+.nav-justified {
+  .nav-item .nav-link {
+    width: 100%; // Make sure button will grow
+  }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
+
+
+/* Utilities */
+.mb-5 {
+    margin-bottom: 80px;
+}
+.mt-auto {
+    margin-top: auto!important;
+}
 /*Responsivness*/
 @media (max-width: 767px){
     .multi-vehicle-information .tooltip-i {
@@ -1847,8 +2034,43 @@ footer .nav-item svg {
         top: -60px;
     }
 }
+/* Thank you Progress */
+.step.thankyou {
+    position: relative;
+}
+p.stepLabel {
+    position: absolute;
+    top: 30px;
+    left: -22px;
+}
+.progress-bar-wrap.ty {
+    margin-top:60px;
+}
+/* Disclaimer */
+.disclaimer {
+    width:100%;
+    margin:40px 0;
 
-
+}
+.disclaimer p{
+    font-size:12px;
+    clear:both;
+    margin-top:20px;
+    float:left;
+    padding:30px;
+}
+.disclaimer .half{
+    float:left;
+    width: calc(50% - 4px);
+    background: #D9D9D9;
+    padding:30px;
+    margin:0 2px;
+}
+.disclaimer .half p{
+    margin:0;
+    padding:0;
+    font-size:1rem;
+}
 /*404 page*/
 .error404 {
     text-align: center;
