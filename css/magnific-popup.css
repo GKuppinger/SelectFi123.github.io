@@ -219,10 +219,12 @@ button::-moz-focus-inner {
 .mfp-iframe-holder {
   padding-top: 40px;
   padding-bottom: 40px; }
-  .mfp-iframe-holder .mfp-content {
+.mfp-iframe-holder .mfp-content {
     line-height: 0;
     width: 100%;
-    max-width: 900px; }
+    max-width: 900px;
+    height: calc(100vh - 32px);
+}
   .mfp-iframe-holder .mfp-close {
     top: -40px; }
 
