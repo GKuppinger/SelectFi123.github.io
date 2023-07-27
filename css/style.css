@@ -72,7 +72,7 @@ abbr,acronym { border:0;
 *:after { margin: 0; padding: 0; box-sizing: border-box; }
 body { font: 200 18px/1.22 'Lato', sans-serif; color: #fff; background: var(--bg_color); min-height: 100%; touch-action: pan-x pan-y; }
 body.page-template-login-template footer { display: none; }
-.content { position: relative; padding-top: 125px; padding-bottom: 300px; background: #f6f6f6; width: 100%; }
+.content {float:left; position: relative; padding-top: 125px; padding-bottom: 300px; background: #f6f6f6; width: 100%; height: 100%; min-height: 100vh; }
 h1,
 h2,
 h3,
