@@ -98,9 +98,9 @@ body .blue_button:hover { background: transparent; border-color: #3F60B5; color:
 .input_box .select_arrow { position: absolute; right: 13px; top: 44px; pointer-events: none; color: #666 !important; }
 .input_box .checkmark_label { display: inline-flex; align-items: center; position: relative; overflow: hidden; white-space: nowrap; margin-right: 30px; }
 .input_box input[disabled] ~ .checkmark_label { color: #9a9a9a; }
-.input_box .checkmark_label:before { content: "16"; display: inline-block; width: 28px; height: 28px; flex-shrink: 0; margin-right: 15px; border: 1px solid #666666; border-radius: 50%; }
+.input_box .checkmark_label:before { content: ""; display: inline-block; width: 28px; height: 28px; flex-shrink: 0; margin-right: 15px; border: 1px solid #666666; border-radius: 50%; }
 .input_box input[disabled] ~ .checkmark_label:before { border-color: #9a9a9a; }
-.input_box .checkmark_label:after { content: "15"; position: absolute; top: 50%; left: 4px; transform: translateY(-50%); width: 20px; height: 20px; flex-shrink: 0; background: #1D3E93; border-radius: 50%; opacity: 0; transition: .4s; }
+.input_box .checkmark_label:after { content: ""; position: absolute; top: 50%; left: 4px; transform: translateY(-50%); width: 20px; height: 20px; flex-shrink: 0; background: #1D3E93; border-radius: 50%; opacity: 0; transition: .4s; }
 .input_box.radio_box { margin-bottom: 48px; }
 .input_box input[disabled] ~ .checkmark_label:after { background: #9a9a9a; }
 .input_box input:checked ~ .checkmark_label:after { opacity: 1; }
