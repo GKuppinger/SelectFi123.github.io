@@ -83,6 +83,11 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   
   
   iframe: {
+  	markup: '<div class="mfp-iframe-scaler">'+
+            '<div class="mfp-close"></div>'+
+            '<div class="mfp-header"><div class="dLogo"><img src="logo.jpg" alt=""/></div> <p>header info</p> </div>'+
+            '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+          '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
     patterns: {
       dailymotion: {
        
