@@ -120,6 +120,14 @@ body .table svg { display: block; }
 .arrow { width: 9px; height: 18px; cursor: pointer; display: inline-block; }
 .arrow svg path { fill: #666666; }
 
+/* Modal trigger */
+.buttonwrap {
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* containers */
 .container,
 .container-fluid,
