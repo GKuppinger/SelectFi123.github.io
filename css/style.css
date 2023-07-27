@@ -21,7 +21,47 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
-
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+    margin:0;
+    padding:0;
+}
+html,body {
+    margin:0;
+    padding:0;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset,img { 
+    border:0;
+}
+input{
+    border:1px solid #b0b0b0;
+    padding:3px 5px 4px;
+    color:#979797;
+    width:190px;
+}
+address,caption,cite,code,dfn,th,var {
+    font-style:normal;
+    font-weight:normal;
+}
+ol,ul {
+    list-style:none;
+}
+caption,th {
+    text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:normal;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border:0;
+}
 /*new templates*/
 @font-face { font-family: 'Nexa Bold'; src: local('Nexa Bold'), local('NexaBold'), url('/wp-content/themes/selectfi/fonts/NexaBold.woff2') format('woff2'), url('/wp-content/themes/selectfi/fonts/NexaBold.woff') format('woff'); font-weight: bold; font-style: normal; font-display: swap; }
 @font-face { font-family: 'Nexa Bold'; src: local('Nexa Bold'), local('NexaBold'), url('/wp-content/themes/selectfi/fonts/NexaRegular.woff2') format('woff2'), url('/wp-content/themes/selectfi/fonts/NexaRegular.woff') format('woff'); font-weight: 400; font-style: normal; font-display: swap; }
@@ -121,9 +161,12 @@ body .table svg { display: block; }
 .arrow svg path { fill: #666666; }
 
 /* Modal trigger */
+body.homepage{
+	background:#ddd;
+}
 .buttonwrap {
-    height: 200px;
-    border: 1px solid black;
+    height: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -272,7 +315,7 @@ footer .nav-item svg { max-height: 26px; }
 .multi-vehicle-information .progress-bar-wrap .step { width: 100%; display: flex; align-items: center; justify-content: center; }
 .multi-vehicle-information .progress-bar-wrap .step:last-child { width: auto; }
 .multi-vehicle-information .progress-bar-wrap .step .line { width: 100%; position: relative; border-bottom: 2px dashed #F9E900; transition: .3s; }
-.multi-vehicle-information .progress-bar-wrap .step .line:after { width: 100%; position: absolute; left: 0; top: 0; content: "%23bbbbbb"; }
+.multi-vehicle-information .progress-bar-wrap .step .line:after { width: 100%; position: absolute; left: 0; top: 0; content: ""; }
 .multi-vehicle-information .progress-bar-wrap .step:first-child .circle { background: #1D3E93 !important; position: relative; left: 2px; }
 .multi-vehicle-information .progress-bar-wrap .step:first-child .line { border-bottom: 10px solid #082571 !important; border-image: linear-gradient(to right, #082571, #fff) 1; }
 .multi-vehicle-information .progress-bar-wrap .step .line { border-bottom: 10px solid #fff; }
@@ -562,7 +605,7 @@ p.stepLabel { position: absolute; top: 30px; left: -22px; }
 .progress-bar-wrap.ty { margin-top: 60px; }
 
 /* Disclaimer */
-.disclaimer { width: 100%; margin: 80px 0; float: left;}
+.disclaimer { width: 100%; margin: 80px 0 0; float: left;}
 .disclaimer p { font-size: 12px; clear: both; margin-top: 20px; float: left; padding: 30px; }
 .disclaimer .half { float: left; width: calc(50% - 30px); background: #e6e6e6; padding: 30px; margin: 0 15px; border-radius: 10px; }
 .disclaimer .half p { margin: 0; padding: 0; font-size: 1rem; }
