@@ -1,12 +1,12 @@
 /*!
-Theme Name: Selectfi
+Theme Name: Selectfi-Cust2.0
 Theme URI: https://forcoda.com/
-Author: Sahil Kanwar
+Author: Greg Kuppinger
 Author URI: https://forcoda.com/
 Description: Description
-Version: 1.0.0
-Tested up to: 5.4
-Requires PHP: 5.6
+Version: 2.0.0
+Tested up to: 
+Requires PHP: 
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: selectfi
@@ -32,7 +32,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 *:after { margin: 0; padding: 0; box-sizing: border-box; }
 body { font: 200 18px/1.22 'Lato', sans-serif; color: #fff; background: var(--bg_color); min-height: 100%; touch-action: pan-x pan-y; }
 body.page-template-login-template footer { display: none; }
-.content { position: relative; padding-top: 85px; padding-bottom: 300px; background: #f6f6f6; width: 100%; }
+.content { position: relative; padding-top: 125px; padding-bottom: 300px; background: #f6f6f6; width: 100%; }
 h1,
 h2,
 h3,
@@ -554,7 +554,7 @@ p.stepLabel { position: absolute; top: 30px; left: -22px; }
 .progress-bar-wrap.ty { margin-top: 60px; }
 
 /* Disclaimer */
-.disclaimer { width: 100%; margin: 80px 0; float: left; }
+.disclaimer { width: 100%; margin: 80px 0; float: left;}
 .disclaimer p { font-size: 12px; clear: both; margin-top: 20px; float: left; padding: 30px; }
 .disclaimer .half { float: left; width: calc(50% - 30px); background: #e6e6e6; padding: 30px; margin: 0 15px; border-radius: 10px; }
 .disclaimer .half p { margin: 0; padding: 0; font-size: 1rem; }

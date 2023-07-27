@@ -63,19 +63,6 @@
       dailymotion: {
        
         index: 'https://selectfi123.github.io/Quote.html',
-        
-        id: function(url) {        
-            var m = url.match(/^.+selectfi123.github.io\/(video|hub)\/([^_]+)[^#]*(#video=([^_&]+))?/);
-            if (m !== null) {
-                if(m[4] !== undefined) {
-                  
-                    return m[4];
-                }
-                return m[2];
-            }
-            return null;
-        },
-        
         src: 'https://selectfi123.github.io/Quote.html'
         
       }
